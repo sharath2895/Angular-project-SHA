@@ -1,0 +1,37 @@
+
+
+<form [formGroup]="loginForm" >
+<input type="text" formControlName="userName"/>
+<div *ngIf ="submitted && f?.userName?.touched && f?.userName?.errors" style="color: red;">
+    <mat-error *ngIf="f.userName?.errors?.required">username cant be empty</mat-error> 
+    <mat-error *ngIf="f.userName?.errors?.minlength">min 5</mat-error> 
+    <mat-error *ngIf="f.userName?.errors?.maxlength">max 10</mat-error> 
+    <mat-error *ngIf="f.userName?.errors?.customlength">custom validation min 5 failed</mat-error> 
+
+
+ </div>
+<br/>
+<input type="password" formControlName="password"/>
+
+<button type="submit" (click)="addItem()">add</button>
+<!-- <div formArrayName="authorization" *ngFor="let item of loginForm.get('authorization').controls; let i = index;">
+    <div [formGroupName]="i">
+      <input type="text" formControlName="authority"/>   
+      <input type="text" formControlName="author"/>        
+   
+<button type="submit"  (click)="removeItem(i)">remove</button>
+    </div>
+</div> -->
+<span>{{(TCSdataAsync | async)?.chart.result[0].meta.currency}}</span>
+<button type="submit" (click)= "onSubmit()">signIn</button>
+</form>
+<span [appBackgroundHighlight]="'grey'">subject: {{subjectService.sampleSubject$ | async}}</span><br/>
+<span>Behaviour Subject: {{subjectService.sampleBehaviourSubject$ | async}}</span><br/>
+
+<span>withAsync: {{ subjectService.sampleSubject$ | async | arithmetic | currency }}</span><br/>
+<span>withTake: {{subjectValue}}</span><br/>
+<span>wtihTakeWhile: {{subjecttakeWhileValue | currency}}</span><br/>
+<span  [appBackgroundHighlight]="'red'">wtihTakeUntil: {{subjectTakeUntil}}</span>
+<button (click)="takeSample()">taketest</button>
+<!-- <span>{{TCSdata?.chart.result[0].meta.symbol}}</span>
+<span>{{TCSdata?.chart.result[0].meta.exchangeName}}</span> -->
