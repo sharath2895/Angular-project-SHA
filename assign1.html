@@ -1,0 +1,27 @@
+<title>Assignment 1
+
+</title>
+
+<head>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="evenNumbers"></div>
+  <script>
+    let evenNbrcount = 0;
+    let evenNumbers = [];
+    for (var i = 20; i <=70; i++) {
+      if (i % 2 == 0) {
+        console.log(i);
+
+        evenNumbers.push(i)
+        //evenNbrCount++;
+      }
+    }
+    document.getElementById("evenNumbers").innerHTML = "Even Numbers are : " + evenNumbers;
+  </script>
+</body>
