@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<title>LOGIN PAGE</title>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="loginpage.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<h2 id="welcome"> WELCOME</h2>
+
+<h4 id="note">Please fill this to SignUp</h4>
+
+<div class="container">
+
+    <body class="home">
+        <div class="form">
+            <h4 id="important">fields marked * are important</h4>
+            <form action="#">
+                <label for="First Name">First Name</label>
+                <input type="text" id="firstname" placeholder="First name">
+                <label for="Last name">Last Name</label>
+                <input type="text" id="lastname" placeholder="Last Name">
+                <br>
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" id="email" placeholder="Username *">
+                <br>
+                <br>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" id="password" placeholder="password *">
+                <br>
+                <br>
+                <label for="cpassword">Confirm password</label>
+                <br>
+                <input type="password" id="cpassword" placeholder="confirm password *">
+                <br>
+                <br>
+                <label for="age">Age</label>
+                <input type="number" id="age">
+                <br>
+                <br>
+                <label for="gender">Gender</label>
+                <br>
+                <div>
+                    <input type="radio" id="genderMale">Male
+                    <input type="radio" id="genderFemale"> Female
+                    <br>
+                    <br>
+                    <label for="checkbox">Games</label>
+                    <br>
+                    <input type="checkbox" id="checkbox">cricket
+                    <input type="checkbox">football
+                    <input type="checkbox"> kabaddi
+                    <input type="checkbox"> kho-kho
+                    <br>
+                    <br>
+                    <button class="submit" onclick="login()"> Create account <i class="material-icons"> people</i>
+                    </button>
+                    <button type="submit" class="button2"> <a
+                            href="https://accounts.google.com/signout/chrome/landing?continue=https://mail.google.com/mail&oc=https://mail.google.com/mail&hl=en">
+                            SignIn with google </a>
+                        <i class="material-icons"> work</i>
+                    </button>
+            </form>
+        </div>
+        <br>
+        <script type="text/javascript">
+            function login() {
+                var firstname = document.getElementById("firstname").value;
+                var lastname = document.getElementById("lastname").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var cpassword = document.getElementById("cpassword").value;
+                var age = document.getElementById("age").value;
+
+
+                if (firstname == "") {
+                    alert(" please enter firstname")
+                    console(" please enter firstname");
+                }
+                if (email == "") {
+                    alert("please enter email id")
+                    console("please enter email id");
+                }
+                if (password == "") {
+                    alert(" please enter password")
+                    console(" please enter password");
+                }
+                if (password == cpassword) {
+                    console(" passwords matched");
+                    alert("passwords matched")
+                }
+                else {
+                    alert("please enter same passwords")
+                }
+                if (document.getElementById("genderMale").checked) {
+                    alert("Male is selected")
+                }
+                if (document.getElementById("genderFemale").checked) {
+                    alert("female is selected")
+                }
+                if (firstname == "sharath " && email == "assharath2895@gmail.com" && password == "sharu" && cpassword == "sharu") {
+                    console.log("firstname : " + firstname);
+                    console.log("lastname : " + lastname);
+                    console.log("email : " + email);
+                    console.log("password : " + password);
+                    console.log("cpassword : " + cpassword);
+                    console("sharath account created successfully")
+                    alert(" sharath account created successfully")
+                }
+                else {
+                    console.log(" wrong credential entered");
+                    alert("wrong credentials entered");
+                }
+
+
+            }
+        </script>
+    </body>
+</div>

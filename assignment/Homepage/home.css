@@ -1,0 +1,32 @@
+.homecontain{
+    background-color: rgb(153, 79, 131);
+}
+.container{
+padding-top: 10px;
+padding-left: 350px;
+}
+#hr3{
+    text-align: center;
+    font-family: georgia;
+    font-style: italic;
+}
+.button{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 1px;
+  cursor: pointer;
+}
+#home{
+    background-color: lightsalmon;
+}
+#about{
+    background-color: lightseagreen;
+}
+#contact{
+    background-color: rgb(150, 150, 44);
+}

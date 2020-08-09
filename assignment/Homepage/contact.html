@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<title>CONTACT INFO
+</title>
+<br>
+<br>
+<br>
+
+<head>
+   <h2 id="header4"> Register yourself for Enquiries !</h2>
+    <link rel="stylesheet" href="contact.css" type="text/css" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#">
+            <label for="email">Email</label>
+            <br>
+            <input id="email" type="email" placeholder="Email">
+            <br>
+            <br>
+            <label for="number">Mobile number</label>
+            <br>
+            <input id="number" type="number" placeholder="Mobile Number">
+            <br>
+            <br>
+            <textarea id="message" placeholder="type your message here"></textarea>
+            <br>
+            <br>
+            <button id="submit" type="submit" onclick="login()">Submit</button>
+            <br>
+            <br>
+            
+        </form>
+    </div>
+    <script>
+        function login() {
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+            var message = document.getElementById("message").value;
+            if (email == "" && number=="" && message=="") {
+                alert("Please enter credentials")
+            }else{
+                alert("Thanks! Your response is recieved")
+            }
+        }
+    </script>
+</body>

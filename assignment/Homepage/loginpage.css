@@ -1,0 +1,18 @@
+
+#welcome{
+    text-align: center;
+    font-family: serif;
+}
+#note{
+    text-align: center;
+font-family: sans-serif;    
+}
+.container{
+padding-left: 300px;
+    padding-top: 50px;
+}
+.home{
+background-color: rgb(214, 212, 109);
+
+}
+
