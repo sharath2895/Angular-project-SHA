@@ -1,9 +1,9 @@
 .homecontain{
-    background-color: rgb(153, 79, 131);
+    background-color: rgb(226, 171, 210);
 }
 .container{
 padding-top: 10px;
-padding-left: 350px;
+padding-left: 300px;
 }
 #hr3{
     text-align: center;
@@ -29,4 +29,7 @@ padding-left: 350px;
 }
 #contact{
     background-color: rgb(150, 150, 44);
+}
+#login{
+    background-color: rgb(120, 173, 84);
 }
