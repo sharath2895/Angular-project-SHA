@@ -6,8 +6,9 @@
 <br>
 
 <head>
-   <h2 id="header4"> Register yourself for Enquiries !</h2>
+    <h2 id="header4"> Register yourself for Enquiries !</h2>
     <link rel="stylesheet" href="contact.css" type="text/css" media="screen">
+    <link rel="script" href="contact.ts" type="text/script" media="screen">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
             <button id="submit" type="submit" onclick="login()">Submit</button>
             <br>
             <br>
-            
+
         </form>
     </div>
     <script>
@@ -37,9 +38,9 @@
             var email = document.getElementById("email").value;
             var number = document.getElementById("number").value;
             var message = document.getElementById("message").value;
-            if (email == "" || number=="" || message=="") {
+            if (email == "" || number == "" || message == "") {
                 alert("Please enter credentials")
-            }else{
+            } else {
                 alert("Thanks! Your response is recieved")
             }
         }
