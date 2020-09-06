@@ -1,0 +1,46 @@
+.html{
+    position: absolute;
+    resize: none;
+    width: auto;
+}
+.title{
+   height: 200x;
+    border-top-width: ; 
+    background-color:lightgreen; 
+    font-weight: bold;
+    
+}
+#h1{
+    padding-top: 60px;
+    text-align-last: center;    
+    
+}
+#h3{
+    text-align-last: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-style: italic;
+    font-size: larger;
+}
+.content{
+    margin: auto;
+    text-align: justify;
+    width:1200px;
+    padding-top: 30px;
+    padding-left: 170px;
+    padding-right: 50px;
+
+    
+}.button{
+    text-align:center;
+    padding-bottom: 20px;
+}
+#agree{
+    margin-left: 10px;
+    
+}
+#wholepage{
+    width: 1200px;
+    
+    
+}
