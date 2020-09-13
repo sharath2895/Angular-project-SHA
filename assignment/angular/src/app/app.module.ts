@@ -9,11 +9,29 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveformsBuilderComponent } from './reactiveforms-builder/reactiveforms-builder.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { MatInputModule } from '@angular/material/input';
+import { LeftnavigationComponent } from './leftnavigation/leftnavigation.component';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ReactiveFormsComponent,
+    ReactiveformsBuilderComponent,
+    AutocompleteComponent,
+    LeftnavigationComponent,
+   
+    
     
   ],
   imports: [
@@ -23,8 +41,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatAutocompleteModule,
     MatButtonModule,
     FormsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatListModule
+  
     
   ],
   providers: [],

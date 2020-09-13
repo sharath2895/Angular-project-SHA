@@ -1,6 +1,40 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()">
-    <br>
-    <input formControlName="username"/>
-    <input formControlName="password"/>
-<button type="submit">submit</button>
-</form>
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <div class="formContainer">
+        <form [formGroup]="loginform" (ngSubmit)="login()">
+            <br>
+            <input placeholder="username" type="text" formControlName="userName" />
+            <br>
+            <br>
+            <input placeholder="password" type="password" formControlName="password" />
+            <br>
+            <br>
+            <input placeholder="confirmpassword" type="password" formControlName="confirmpassword" />
+            <br>
+            <br>
+            <input type="email" formControlName="email" />
+            <br>
+            <br>
+            <div formArrayName="comments">
+                <div *ngFor="let input of f.get('comments')['controls']; let i = index">
+                    <br>
+                    <input type="text" [formControlName]='i' />
+                    <button mat-button (click)="removeField()">removefield</button>
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <button mat-raised-button color="primary" type="submit">LogIn</button>
+        </form>
+        <br>
+        <br>
+        <button mat-button (click)="addField()">add field</button>
+        
+    </div>
+</body>

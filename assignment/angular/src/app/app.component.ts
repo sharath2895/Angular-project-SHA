@@ -1,5 +1,7 @@
 import { Component, OnInit, OnChanges, DoCheck, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
+import { FormControl, Validators } from '@angular/forms';
+import { VERSION } from '@angular/material/core';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +13,8 @@ export class AppComponent implements OnInit
 //AfterContentInit,AfterViewChecked,AfterViewInit, OnDestroy 
 {
   public data: Observable<string>;
-  public title: string  ;
-  
+  public title: string ;
+  version = VERSION;
 
   
   constructor() {
@@ -31,6 +33,5 @@ export class AppComponent implements OnInit
  // ngOnDestroy(){console.log('ngOnDestroy()') }
   
 
-
-
+ 
 }

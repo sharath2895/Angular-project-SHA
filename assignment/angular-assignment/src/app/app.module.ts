@@ -6,12 +6,14 @@ import { SharathAssignmentComponent } from './sharath-assignment/sharath-assignm
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { LeftNavigationComponent } from './left-navigation/left-navigation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SharathAssignmentComponent
+    SharathAssignmentComponent,
+    LeftNavigationComponent
     
   ],
   imports: [

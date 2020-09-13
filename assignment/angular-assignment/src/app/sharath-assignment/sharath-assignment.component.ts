@@ -15,13 +15,14 @@ export class SharathAssignmentComponent implements OnInit {
   constructor() {
 
   }
-  disagree(){
+  signin(){
     alert('you disagree to the license')
     console.log("you disagree")
     return
   }
 
   ngOnInit(): void {
+
   }
 
 }
