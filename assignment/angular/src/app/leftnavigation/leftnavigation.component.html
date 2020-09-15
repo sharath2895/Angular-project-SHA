@@ -1,44 +1,27 @@
-<mat-sidenav-container fullscreen color="primary">
-    <mat-sidenav #sidenav >
-      <mat-nav-list>
-<a *ngFor="let route of routes" mat-list-item [routerlink]="route.path" (click)="sidenav.toggle()"> {{route.path}}</a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <div style="height: 88vh;">
-            <mat-toolbar color="primary">
-              <button  mat-icon-button 
-                       aria-label="Menu"
-                       (click)="sidenav.open()"> menu
-            </button>   
+<div >
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a *ngFor="let route of routes" mat-list-item [routerLink]="route.path" (click)="sidenav.toggle()">
+        {{route.path}}</a>
+    </mat-nav-list>
+    <h4>{{sampleservice.samplenumbers}}</h4>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <mat-toolbar color="primary">
+        <button mat-icon-button aria-label="Menu" (click)="sidenav.open()">
+          <mat-icon>menu</mat-icon>
+        </button>
       </mat-toolbar>
-      </div>
-    </mat-sidenav-content>
-    
-  </mat-sidenav-container>
-  <router-outlet></router-outlet>
-
-
-<!-- 
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav>
-      <mat-nav-list>
-        <a *ngFor="let route of routes"
-           mat-list-item  
-           [routerLink]="route.path" 
-           (click)="sidenav.toggle()"> {{route.path}}</a>
-      </mat-nav-list> 
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div style="height: 88vh;">
-          <mat-toolbar color="primary">
-            <button  mat-icon-button 
-                     aria-label="Menu"
-                     (click)="sidenav.open()">
-            menu
-          </button>         
-    </mat-toolbar>
       <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
-  </mat-sidenav-container> -->
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
+
+<!-- <input type="checkbox" id="1"
+       [ngModel]="filter" (ngModelChange)="onFilterChange($event)"> Checkbox
+       <button mat-button color="primary" (click)="onFilterChange($event)">
+         click me
+       </button> -->

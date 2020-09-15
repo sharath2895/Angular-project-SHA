@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTES, RoutesRecognized } from '@angular/router';
+import { SampleService } from 'src/shared/services/sample.service';
+import { routes } from '../app-routing.module';
 
 @Component({
   selector: 'app-leftnavigation',
@@ -7,17 +8,27 @@ import { ROUTES, RoutesRecognized } from '@angular/router';
   styleUrls: ['./leftnavigation.component.css']
 })
 export class LeftnavigationComponent implements OnInit {
-  routes = ROUTES;
-
+  routes = routes;
+  filter= false;
+showleftpanel= true;
   
-  constructor() {
+  constructor(public sampleservice: SampleService) {
 
   }
 
- ngOnInit() { }
+ ngOnInit() {
+  console.log(this.sampleservice.samplenumbers)
+  this.sampleservice.samplenumbers =this.sampleservice.samplenumbers + 1;
+  }
   // sidenavToggle() {
   //   this.ngStyle = 'this.sidenavWidth = 15';
   //   console.log('sidenav width incrases');
   // }
+  // onFilterChange(eve: any) {
+  //   this.filter = !this.filter;
+  //   console.log('checkbox is checked')
+  // }
+ 
+  
 
 }

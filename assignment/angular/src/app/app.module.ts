@@ -17,7 +17,10 @@ import {MatListModule} from '@angular/material/list';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { MatInputModule } from '@angular/material/input';
 import { LeftnavigationComponent } from './leftnavigation/leftnavigation.component';
-
+import {MatIconModule} from '@angular/material/icon';
+import { ApplyLoanComponent } from './Loanfile/apply-loan/apply-loan.component';
+import { LoanProcessComponent } from './Loanfile/loan-process/loan-process.component';
+import { LoanRepaymentComponent } from './Loanfile/loan-repayment/loan-repayment.component';
 
 
 
@@ -30,6 +33,10 @@ import { LeftnavigationComponent } from './leftnavigation/leftnavigation.compone
     ReactiveformsBuilderComponent,
     AutocompleteComponent,
     LeftnavigationComponent,
+    ApplyLoanComponent,
+    LoanProcessComponent,
+    LoanRepaymentComponent,
+
    
     
     
@@ -46,7 +53,8 @@ import { LeftnavigationComponent } from './leftnavigation/leftnavigation.compone
     MatSidenavModule,
     MatToolbarModule,
     MatInputModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   
     
   ],

@@ -1,12 +1,12 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveformsBuilderComponent } from './reactiveforms-builder/reactiveforms-builder.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
-import { LeftnavigationComponent } from './leftnavigation/leftnavigation.component';
 
-const routes: Routes =  [
+
+export const routes: Routes =  [
   {
     path:'login', component:LoginComponent
   },
@@ -18,9 +18,6 @@ const routes: Routes =  [
   },
   {
     path:'reactiveforms-builder', component:ReactiveformsBuilderComponent
-  },
-  {
-    path:'leftnavigation', component:LeftnavigationComponent
   }
 ]
 
@@ -28,4 +25,6 @@ const routes: Routes =  [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  
+}
