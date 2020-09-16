@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SampleService } from 'src/shared/services/sample.service';
 import { routes } from '../app-routing.module';
 
@@ -8,6 +8,8 @@ import { routes } from '../app-routing.module';
   styleUrls: ['./leftnavigation.component.css']
 })
 export class LeftnavigationComponent implements OnInit {
+  @Input () value: string ='child-data';
+  @Output () outputvalue = new EventEmitter <string>();
   routes = routes;
   filter= false;
 showleftpanel= true;
@@ -29,6 +31,9 @@ showleftpanel= true;
   //   console.log('checkbox is checked')
   // }
  
-  
+  sendValue(){
+this.outputvalue.emit('Value is emitted from child');
+console.log(this.outputvalue);
+  }
 
 }

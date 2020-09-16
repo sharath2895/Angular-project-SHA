@@ -21,6 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { ApplyLoanComponent } from './Loanfile/apply-loan/apply-loan.component';
 import { LoanProcessComponent } from './Loanfile/loan-process/loan-process.component';
 import { LoanRepaymentComponent } from './Loanfile/loan-repayment/loan-repayment.component';
+import { InsuranceRoutingModule } from './Insurance/insurance-routing.module';
+
 
 
 
@@ -35,9 +37,7 @@ import { LoanRepaymentComponent } from './Loanfile/loan-repayment/loan-repayment
     LeftnavigationComponent,
     ApplyLoanComponent,
     LoanProcessComponent,
-    LoanRepaymentComponent,
-
-   
+    LoanRepaymentComponent
     
     
   ],
@@ -54,11 +54,14 @@ import { LoanRepaymentComponent } from './Loanfile/loan-repayment/loan-repayment
     MatToolbarModule,
     MatInputModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    InsuranceRoutingModule,
   
     
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

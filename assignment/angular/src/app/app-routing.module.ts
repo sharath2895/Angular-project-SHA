@@ -18,7 +18,15 @@ export const routes: Routes =  [
   },
   {
     path:'reactiveforms-builder', component:ReactiveformsBuilderComponent
-  }
+  },
+  {
+    path:'insurance', loadChildren: () => import('./Insurance/insurance-routing.module').then(m => m.InsuranceRoutingModule)
+    
+  },
+  // {
+  //   path:'Insurance', 
+  //   loadChildren: './Loanfile/loan-routing.module#LoanFileRoutingModule'
+  // }
 ]
 
 @NgModule({
