@@ -10,8 +10,9 @@ import { Observable } from 'rxjs';
 export class SharathAssignmentComponent implements OnInit {
 
   private data: Observable<string>;
-  title: string = 'End User License Agreement'
-  subtitle: string = 'To Continue, you must agree to this agreement'
+  title: string = 'End User License Agreement';
+  subtitle: string = 'To Continue, you must agree to this agreement';
+  displaycontent = false;
   constructor() {
 
   }
@@ -20,7 +21,10 @@ export class SharathAssignmentComponent implements OnInit {
     console.log("you disagree")
     return
   }
-
+clickevent(){
+this.displaycontent = !this.displaycontent;
+console.log("button is clicked")
+}
   ngOnInit(): void {
 
   }

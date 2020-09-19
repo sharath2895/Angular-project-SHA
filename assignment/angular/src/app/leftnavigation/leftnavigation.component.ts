@@ -8,19 +8,20 @@ import { routes } from '../app-routing.module';
   styleUrls: ['./leftnavigation.component.css']
 })
 export class LeftnavigationComponent implements OnInit {
-  @Input () value: string ='child-data';
-  @Output () outputvalue = new EventEmitter <string>();
+  @Input() value: string = 'child-data';
+  @Output() outputvalue = new EventEmitter<string>();
   routes = routes;
-  filter= false;
-showleftpanel= true;
-  
+  filter = false;
+  showleftpanel = true;
+viewChildResult: string = "Viewchild is implemented";
+
   constructor(public sampleservice: SampleService) {
 
   }
 
- ngOnInit() {
-  console.log(this.sampleservice.samplenumbers)
-  this.sampleservice.samplenumbers =this.sampleservice.samplenumbers + 1;
+  ngOnInit() {
+    console.log(this.sampleservice.samplenumbers)
+    this.sampleservice.samplenumbers = this.sampleservice.samplenumbers + 1;
   }
   // sidenavToggle() {
   //   this.ngStyle = 'this.sidenavWidth = 15';
@@ -30,10 +31,10 @@ showleftpanel= true;
   //   this.filter = !this.filter;
   //   console.log('checkbox is checked')
   // }
- 
-  sendValue(){
-this.outputvalue.emit('Value is emitted from child');
-console.log(this.outputvalue);
+
+  sendValue() {
+    this.outputvalue.emit('Value is emitted from child');
+    console.log(this.outputvalue);
   }
 
 }

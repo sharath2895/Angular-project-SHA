@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable(
   //   {
@@ -12,6 +13,7 @@ export class SampleService {
   public sample2: string = ' service implement';
   public samplenumbers: number = 0;
   public output: number = 0;
+  public sampleObservable$: Observable<string> = of('observable implementation');
 
   sampleadder(a, b) {
     return a * b;

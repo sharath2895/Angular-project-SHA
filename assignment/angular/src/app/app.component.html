@@ -1,16 +1,21 @@
-<app-leftnavigation [value]="'passing value from parent'"></app-leftnavigation>
-<input mat-input type="text" >
+<app-leftnavigation [value]="'passing value from parent'" (outputvalue)="recieveValue($event)"></app-leftnavigation>
+<h1></h1>
+<!-- <input mat-input type="text" >
 
 <br><h1>{{sampleservice.samplenumbers}}</h1>
 <button mat-button color="primary"(click)="submit()" >click</button>
 <h1>{{sampleservice.Increment}}</h1>
-
+<button type="submit" mat-button color="primary" >Enable footer</button>
 <h1>{{sharath}}</h1>
 <h1 *ngIf="false">NGIF DIRECTIVE</h1>
 <p>{{service}}</p>
 
-
-
+<div style="background-color: aqua; height: 15px;" *ngIf="!displayText" class="displaytext">
+    <h1>this text will be hidden when you click on the button</h1>
+</div>
+<br>
+<br>
+<button mat-button color="amber" (click)="buttonFunc">click here</button> -->
 
 
 

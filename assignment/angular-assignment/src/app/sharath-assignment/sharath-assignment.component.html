@@ -7,7 +7,7 @@
 
 <body>
     <div id="wholepage">
-        <div class="content">
+        <div *ngIf="!displaycontent" class="displayContent">
             <p>
                 McAfee (as defined below) and Company (as identified in the Grant Letter) agree to the terms of this
                 Agreement
@@ -154,7 +154,9 @@
             <div class="button">
                 <button mat-raised-button id="agree" matTooltip="You DisAgree" type="submit" id="Disagree" (click)="signin()">Disagree</button>
                 <button mat-raised-button color="primary" matTooltip="You Agree" id="disagree" type="submit" id="agree">I Agree</button>
+               
             </div>
         </div>
     </div>
+    <button mat-raised-button id="agree"  type="submit" id="Disagree" (click)="clickevent()">DisplayContent</button>
 </body>
