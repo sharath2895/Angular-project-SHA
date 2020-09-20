@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .myStyle {
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+
+        .myclass {
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="demo" class="sample">this is the sample paragraph for ID</p>
+    <button onclick="signIn()">click here</button>
+    <br>
+    <br>
+    <p id="sample" class="sample">this is the sample paragraph for class</p>
+    <button onclick="submit()">click here</button>
+    <br>
+    <br>
+    <p>An unordered list:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <p>Click the button below to display document of getting getElementsByTagName.</p>
+    <p id="demotag"></p>
+    <button onclick="myFunction()">Try it</button>
+
+    
+
+    <p>click here for Jquery event handler</p>
+    <p><button onclick="submitbtn()">Test button</button></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="evenNumbers"></div>
+    <br>
+    <br>
+    <div id="arraynumbers"></div>
+    <br>
+    <br>
+    <select id="mySelect" onchange="dropDown()">
+        <option>select</option>
+        <option>mani</option>
+        <option>ramu</option>
+        <option>suresh</option>
+        <option>raja</option>
+    </select>
+    <br>
+    <p id="dropDownMenu"></p>
+    <br>
+    <br>
+    <div id="classForm">
+        <form>
+            <input type="checkbox" id="bk" name="vehicle" value="Bike">I have a bike<br></br>
+            <input type="checkbox" id="cr" name="vehicle" value="Car">I have a car<br></br>
+            <input type="submit" value=" submit " size="30" onClick="return checkbox();">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <button onclick="addclass()">Click here </button>
+
+    <div id="myDIV">
+        This is adding a class to the element.
+    </div>
+    <button onclick="removeClass()">Try it</button>
+    <div id="myDIV" class="myclass">
+        This is a DIV element.
+    </div>
+    <br>
+    <br>
+    <br>
+<button onclick="printmessage()">click here</button>
+</body>
+
+<script>
+
+    function signIn() {
+        document.getElementById("demo").innerHTML = "document get by id";
+
+    }
+    function submit() {
+        document.getElementsByClassName("sample").innerText= "document get by Class";
+    }
+    function myFunction() {
+        var x = document.getElementsByTagName("li");
+        document.getElementById("demotag").innerHTML = "document by tag";
+    }
+    function submitbtn() {
+        alert('button clicked');
+    }
+    $(document).ready(function () {
+        $("p").bind("click", function () {
+            alert("The paragraph was clicked.");
+        });
+    });
+
+
+    let oddNbrcount = 0;
+    let oddNumbers = [];
+    for (var i = 20; i <= 50; i++) {
+        if (i % 2 == 1) {
+            oddNumbers.push(i) 
+        }
+    }
+    document.getElementById("evenNumbers").innerHTML = "odd Numbers are : " + oddNumbers;
+
+    let arraynumbers = [];
+    for (var i = 20; i <= 50; i++) {
+        if (i + 0 == i) {
+            arraynumbers.push(i);
+        }
+    }
+    document.getElementById("arraynumbers").innerHTML = "The numbers are : " + arraynumbers;
+
+    function dropDown() {
+        var a = document.getElementById("mySelect").value;
+        document.getElementById("dropDownMenu").innerText = " The name is :" + a;
+    }
+
+    function checkbox() {
+        var bk = document.getElementById("bk").checked;;
+        var cer = document.getElementById("cr").checked;
+        if (bk) {
+            alert(" bike is selected");
+        }
+        if (cer) {
+            alert("car is selected");
+        }
+        return false;
+    }
+    function addclass() {
+        var element = document.getElementById("myDIV");
+        element.classList.add("myStyle");
+
+    }
+    function removeClass() {
+        var element = document.getElementById("myDIV");
+        element.classList.remove("myclass");
+    }
+    function printmessage(){
+        if(a=4 ,b=5){
+            return c= a+b ;
+            console.log(c);
+        }
+    }
+</script>
