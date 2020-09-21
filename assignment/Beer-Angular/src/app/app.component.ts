@@ -16,7 +16,7 @@ export class AppComponent implements AfterViewInit {
   searchInput = "";
   displayAlco;
   displayAlcoList;
-  beerInfo: any;
+
 
   constructor(private punkService: PunkService) {
     this.radioItems = ['by name', 'by Description'];
@@ -25,7 +25,7 @@ export class AppComponent implements AfterViewInit {
   private random(array) {
     return array[Math.floor(Math.random() * array.length)];
   }
-  
+
   ngAfterViewInit() {
     setTimeout(() => {
       let elem = document.getElementById("anotherBeer");

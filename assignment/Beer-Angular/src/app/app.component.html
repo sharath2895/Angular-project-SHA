@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="beerInfo$ | async as beerInfo">
     <div layout="row" layout-align="space-between">
         <div class="orders-table-header boxing beer-info">
             <div *ngIf="displayAlco">
@@ -35,6 +35,10 @@
         <div class="boxingWhite">
             <div class="search-img">
                 <img src="{{displayAlcoListItem.image_url}}" height="75">
+            </div>
+            <div style="flex: 6;">
+                <h5>{{displayAlcoList.name}}</h5>
+                <p>{{displayAlcoList.description}}</p>
             </div>
 
         </div>
