@@ -1,0 +1,43 @@
+<div>
+    <div layout="row" layout-align="space-between">
+        <div class="orders-table-header boxing beer-info">
+            <div *ngIf="displayAlco">
+                <h5>{{displayAlco.name}}</h5>
+                <centre><img src="{{displayAlco.image_url}}" height="75"></centre>
+            </div>
+            <p *ngIf="displayAlco" class="orders-table-text text-center beer-description">{{displayAlco.description}}
+            </p>
+            <div *ngIf="!displayAlco">non alcoholic beer is out of stock !!!</div>
+            <div class="orders-table-text text-center random-button" style="flex: 1; ">
+                <button mat-raised-button id="anotherBeer" (click)="changeAlcoholic(beerInfo)">Another Beer</button>
+                <br /> <br />
+                <button mat-raised-button (click)="changeNonAlcoholic(beerInfo)">Random non alcoholic
+                    beer</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="orders-table-header boxing radio-button">
+        <input id="search" type="text" name="beer" placeholder="search beer" [(ngModel)]="searchInput" />
+        <div class="radio-option">
+            <label *ngFor="let radioButton of radioItems">
+                <input type="radio" name="options" (click)="model.option = rabdioButton" [checked]="radioButton">
+                {{radioButton}}
+            </label>
+        </div>
+        <div class="orders-table-text text-center">
+            <button mat-raised-button id="search" (click)="search(beerInfo)">Search</button>
+        </div>
+    </div>
+
+    <h2>Search Results</h2>
+    <div *ngFor="let displayAlcoListItem of displayAlcoList">
+        <div class="boxingWhite">
+            <div class="search-img">
+                <img src="{{displayAlcoListItem.image_url}}" height="75">
+            </div>
+
+        </div>
+    </div>
+
+</div>
