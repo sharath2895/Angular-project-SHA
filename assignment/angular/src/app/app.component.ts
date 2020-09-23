@@ -59,7 +59,7 @@ ngDoCheck(){
  //ngAfterContentInit(){console.log('ngAfterContentInit()') }
  ngAfterViewInit(){
    console.log('ngAfterViewInit()');
-  console.log( this.child.viewChildResult );
+  console.log( this.child.viewChildResulthttp );
 }
  //ngAfterViewChecked(){console.log('ngAfterViewCheckedt()') }
  //ngOnDestroy(){console.log('ngOnDestroy()') }
