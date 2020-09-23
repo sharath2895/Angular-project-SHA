@@ -34,13 +34,12 @@
     <div *ngFor="let displayAlcoListItem of displayAlcoList">
         <div class="boxingWhite">
             <div class="search-img">
-                <img src="{{displayAlcoListItem.image_url}}" height="75">
+                <img src="{{displayAlcoListItem.image_url}}" alt="{{displayAlcoListItem.name}}" height="75">
             </div>
             <div style="flex: 6;">
                 <h5>{{displayAlcoList.name}}</h5>
                 <p>{{displayAlcoList.description}}</p>
             </div>
-
         </div>
     </div>
 
