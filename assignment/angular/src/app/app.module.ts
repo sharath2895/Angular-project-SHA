@@ -22,6 +22,7 @@ import { ApplyLoanComponent } from './Loanfile/apply-loan/apply-loan.component';
 import { LoanProcessComponent } from './Loanfile/loan-process/loan-process.component';
 import { LoanRepaymentComponent } from './Loanfile/loan-repayment/loan-repayment.component';
 import { InsuranceRoutingModule } from './Insurance/insurance-routing.module';
+import { AgGridComponent } from './ag-grid/ag-grid.component';
 
 
 
@@ -37,7 +38,8 @@ import { InsuranceRoutingModule } from './Insurance/insurance-routing.module';
     LeftnavigationComponent,
     ApplyLoanComponent,
     LoanProcessComponent,
-    LoanRepaymentComponent
+    LoanRepaymentComponent,
+    AgGridComponent
     
     
   ],

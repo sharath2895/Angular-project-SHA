@@ -1,0 +1,30 @@
+<br>
+<header>
+  {{header}}
+</header>
+
+<body>
+  <div class="example-wrapper">
+   
+    
+    <div class="example-header">
+      <label>Search</label>
+      <input matInput type="search" value=" " id="myInput" placeholder="Search" (input)="myInput                                                            ($event.target.value)">
+      <br>
+      Page Size:
+      <select id="page-size">
+        <option value="5" selected="" >5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+      
+      
+    </div>
+  </div>
+  <ag-grid-angular
+   #agGrid 
+   id="ag-grid" style="width: 950px; height: 300px; " class="ag-theme-alpine"
+    [rowData]="rowData" [columnDefs]="columnDefs" [pagination]="true">
+  </ag-grid-angular>
+</body>

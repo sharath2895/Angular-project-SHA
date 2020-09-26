@@ -1,0 +1,17 @@
+header{
+    align-items: center;
+    font-size: 1.5cm;
+    font-family: 'Lucida Sans';
+    text-align: center;
+}
+/* .example-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  } */
+  #myInput{
+      width: auto;
+  }
+  .example-header{    
+      padding-top: 100px;
+  }
