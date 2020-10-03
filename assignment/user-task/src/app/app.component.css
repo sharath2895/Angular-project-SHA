@@ -1,0 +1,13 @@
+.ag-theme-alpine{
+    align-content: center;
+  align-items: center;
+  
+}
+.example-cell{
+    margin-left: 10px;
+    position: relative;
+    
+}
+.userList-table{
+  padding-left: 500px;
+}

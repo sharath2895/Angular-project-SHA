@@ -1,0 +1,48 @@
+.table-container {
+    width: 1200px;
+    align-content: center;
+    padding-left: 170px;
+  }
+  .mat-column-id {
+    flex: none;
+    width: 100px;
+}
+.mat-column-due_date {
+    flex: none;
+    width: 120px;
+}
+.mat-column-message {
+    flex: none;
+    width: 300px;
+}
+.mat-column-priority{
+    flex: none;
+    width: 120px;
+}
+.mat-column-assigned_name{
+    flex: none;
+    width: 120px;
+}
+.mat-column-created_on{
+    flex: none;
+    width: 120px;
+}
+.mat-column-remove{
+    flex: none;
+    width: 120px;
+}
+.mat-column-edit{
+    flex: none;
+    width: 120px;
+}
+.footer{
+    font-weight: bolder;
+    font-style: italic;
+    text-decoration-color: red;
+    text-align: center;
+    text-justify: auto;
+}
+
+.reset-button{
+    text-align: center;
+}

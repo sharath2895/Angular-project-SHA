@@ -1,0 +1,51 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http"
+@Injectable({
+  providedIn: 'root'
+})
+export class UserTaskService {
+  
+  private readonly userListApi: string = 'https://devza.com/tests/tasks/listusers';
+  private readonly createTaskApi: string = 'http://devza.com/tests/tasks/create';
+  private readonly taskListApi: string = 'http://devza.com/tests/tasks/list';
+  private readonly deleteTaskApi: string = 'http://devza.com/tests/tasks/delete';
+  private readonly updateTaskApi: string = 'http://devza.com/tests/tasks/update';
+
+ 
+  constructor(private httpclient: HttpClient) { 
+    
+  }
+
+
+  getUserInfo$() {
+  let  headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    headers.append('AuthToken', 'FPWt6CAAeGF1uIE43s5avByoO3VT8s88');
+    return this.httpclient.get<any>(`${this.userListApi}`, { headers:  {'AuthToken': 'FPWt6CAAeGF1uIE43s5avByoO3VT8s88'} });
+  }
+
+  createUser$() {
+    // const params = new HttpParams()
+    //                 .set('param1', param1Value)
+    //                 .set('param2', param2Value);
+
+    let body = new FormData();
+    body.append('due_date', '2020-09-18');
+    body.append('message', 'you have been assigned task Mr.sharath');
+    body.append('priority', '2');
+    body.append('assigned_to', '1');
+    let  headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    headers.append('AuthToken', 'FPWt6CAAeGF1uIE43s5avByoO3VT8s88');
+  
+
+    return this.httpclient.post<any>(`${this.createTaskApi}`, body, { headers:  {'AuthToken': 'FPWt6CAAeGF1uIE43s5avByoO3VT8s88'} });
+
+  }
+
+  taskList$() {
+    return this.httpclient.get<any>(`${this.taskListApi}`);
+  }
+
+
+}

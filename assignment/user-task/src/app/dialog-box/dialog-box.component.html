@@ -1,0 +1,14 @@
+<form>
+    <div >
+<input matInput placeholder="message" [(ngModel)]="message"  name="message"/> 
+<br>
+<br>
+<input  matInput placeholder="priority" [(ngModel)]="priority"  name="priority"/> 
+<br>
+<br>
+<input  matInput placeholder="assigned_to" [(ngModel)]="assigned_to"  name="assigned_to"/> 
+<br>
+<br>
+<button mat-raised-button color="primary" (click)="updateRecord()">Update</button>
+    </div>
+</form>
