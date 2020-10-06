@@ -44,7 +44,8 @@ export class AppComponent {
       field: 'id', headerName: 'ID', headerCheckboxSelection: true,
       headerCheckboxSelectionFilteredOnly: true,
     },
-    { field: 'picture', headerName: 'Picture', cellRenderer: this.imageRender},
+    { field: 'picture', headerName: 'Picture', cellRenderer: this.imageRender
+  },
         { field: 'name', headerName: 'Name' },
 
   ]
@@ -53,9 +54,9 @@ imageRender(params) {
  return `<span><img border="0" width = "25px" height="50px" src=${params.value} ></span>`;
 }
 
-  openDialog() {
-    this.dialog.open(DialogBoxComponent);
-  }
+  // openDialog() {
+  //   this.dialog.open(DialogBoxComponent);
+  // }
 
   onGridReady(event) {
     this.usertaskserivce.getUserInfo$()

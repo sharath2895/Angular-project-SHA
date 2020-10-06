@@ -72,6 +72,6 @@ export class UserTaskService {
     body.append('assigned_to', '1');
     body.append('taskid', '63');
 
-    return this.httpclient.post<any>(`${this.updateTaskApi}`,body);
+    return this.httpclient.post<any>(`${this.updateTaskApi}`,body,{ headers: { 'AuthToken': 'FPWt6CAAeGF1uIE43s5avByoO3VT8s88' } });
   }
 }

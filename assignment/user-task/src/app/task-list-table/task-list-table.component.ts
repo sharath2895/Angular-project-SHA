@@ -26,6 +26,7 @@ export class TaskListTableComponent implements OnInit {
   priority;
   taskTitle: string = "Task-Management"
   isEdit: boolean=false;
+  data:any;
   constructor(private usertaskserivce: UserTaskService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
