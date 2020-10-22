@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable(
   //   {
@@ -14,6 +14,9 @@ export class SampleService {
   public samplenumbers: number = 0;
   public output: number = 0;
   public sampleObservable$: Observable<string> = of('observable implementation');
+  public sampleSubject$ = new Subject();
+  public sampleBehaviourSubject = new BehaviorSubject(5);
+  public sampleReplaySubject = new ReplaySubject(6);
 
   sampleadder(a, b) {
     return a * b;
