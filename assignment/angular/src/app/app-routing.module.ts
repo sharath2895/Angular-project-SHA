@@ -24,6 +24,10 @@ export const routes: Routes =  [
     
   },
   // {
+  //   path:'loanFile', loadChildren: () => import('./LoanFile/loanfile-routing.module').then(m => m.LoanFileRoutingModule)
+    
+  // }
+  // {
   //   path:'Insurance', 
   //   loadChildren: './Loanfile/loan-routing.module#LoanFileRoutingModule'
   // }
